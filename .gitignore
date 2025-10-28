@@ -4617,3 +4617,9 @@
 /node_modules/yargs-parser/package.json
 /node_modules/yargs-parser/README.md
 /node_modules/.package-lock.json
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/.gitignore
+/.idea/17.iml
+/.idea/modules.xml
+/.idea/vcs.xml
+/.idea/watcherTasks.xml

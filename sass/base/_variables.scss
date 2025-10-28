@@ -1,0 +1,74 @@
+
+
+/*
+** Default
+*/
+$fontSize: 18px;
+$lineHeight: 1.66667;
+$letterSacing: -0.02rem;
+
+$primeryColorDark: #043873;
+$primeryColorLight: #4f9cf9;
+$secondaryColorYelow: #ffe492;
+$secondaryColorBlue: #a7cefc;
+$secondaryColorLight: #ffffff;
+$secondaryColorDark: #212529;
+/*
+** Header
+*/
+/* Fonte Size */
+$H1FontSize: 4rem;
+$H2FontSize: 3.555555556rem;
+$H3FontSize: 3rem;
+$H4FontSize: 2rem;
+$H5FontSize: 1.555555556rem;
+/* Line Hegiht */
+$H1LineHeight: auto;
+$H2LineHeight: auto;
+$H3LineHeight: auto;
+$H4LineHeight: auto;
+$H5LineHeight: 2;
+
+/*
+** Paragraph P1
+*/
+/* Fonte Size */
+$ParagraphP1SemiBoldFonteSize: 1.333333333rem;
+$ParagraphP1RegularFonteSize: 1.333333333rem;
+/* Line Hegiht */
+$ParagraphP1SemiBoldLineHeight: 2;
+$ParagraphP1RegularLineHeight: 1.777777778;
+
+/*
+** Paragraph P2
+*/
+/* Fonte Size */
+$ParagraphP2BoldFonteSize: 1rem;
+$ParagraphP2MediumFonteSize: 1rem;
+$ParagraphP2RegularFonteSize: $fontSize;
+/* Line Hegiht */
+$ParagraphP2BoldLineHeight: auto;
+$ParagraphP2MediumLineHeight: 1,277777778;
+$ParagraphP2RegularLineHeight: $lineHeight;
+
+/*
+** Paragraph P3
+*/
+/* Fonte Size */
+$ParagraphP3MediumFonteSize: 0.8888888893rem;
+$ParagraphP3RegularFonteSize: 0.888888889rem;
+/* Line Hegiht */
+$ParagraphP3MediumLineHeight: auto;
+$ParagraphP3RegularLineHeight: 1.111111111;
+
+/*
+** Breakpoints
+*/
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);

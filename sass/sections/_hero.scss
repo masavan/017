@@ -1,0 +1,40 @@
+@use "../base" as *;
+@use "../components" as *;
+@use "../base/variables" as *;
+
+.hero{
+    position:relative;
+    background-color: $primeryColorDark;
+    background-image:  url("../../images/pattern-1.svg" ) ;
+    background-repeat: no-repeat;
+    background-position: center 60%;
+    padding: 140px 0;
+
+    &__container{
+        display: flex;
+       align-items: center;
+    }
+    &__heading{
+        width: 656px;
+        margin-right: 10px;
+
+    }
+    &__heading-text{
+        color: $secondaryColorLight;
+
+    }
+    &__title{
+
+    }
+    &__text{
+        font-size: $ParagraphP2RegularFonteSize;
+        line-height: $ParagraphP2RegularLineHeight;
+    }
+    &__heading-img{
+        max-width: 824px;
+        width: 100%;
+        height: 549px;
+        background: $primeryColorLight;
+    }
+
+}

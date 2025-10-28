@@ -1,0 +1,22 @@
+@use "./variables" as *;
+
+html {
+  font-size: $fontSize;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: $lineHeight;
+  letter-spacing: $letterSacing;
+  background-color:white;
+}
+.container{
+    max-width: 1544px;
+    margin-inline: auto ;
+    padding: 0 32px;
+}
+h2{
+    font-size: $H2FontSize;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: $letterSacing;
+}
