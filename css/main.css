@@ -77,6 +77,14 @@ h2 {
   letter-spacing: -0.02rem;
 }
 
+h1 {
+  font-size: 4rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02rem;
+}
+
 .mr-24px {
   margin-right: 24px;
 }
@@ -209,4 +217,69 @@ h2 {
   width: 100%;
   height: 549px;
   background: #4f9cf9;
+}
+
+.work-management {
+  position: relative;
+  background-image: url("../../images/pattern-2.svg");
+  background-repeat: no-repeat;
+  background-position: -12% 26%;
+  padding: 140px;
+}
+.work-management__container {
+  display: flex;
+  align-items: center;
+}
+.work-management__heading {
+  width: 672px;
+  height: 411px;
+  padding: 9px;
+  margin-right: 60px;
+}
+.work-management__title {
+  position: relative;
+  color: #000000;
+  z-index: 0;
+}
+.work-management__title::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 135px;
+  left: 0;
+  width: 75%;
+  height: 65px;
+  background-image: url(../../images/highlight.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.work-management__text {
+  font-size: 18px;
+  line-height: 1.66667;
+}
+.work-management__heading-img {
+  width: 748px;
+  height: 547px;
+  background: #4f9cf9;
+}
+.work-together__container {
+  padding-top: 100px;
+  display: flex;
+  align-items: center;
+}
+.work-together__heading {
+  padding-left: 100px;
+}
+.work-together__image {
+  width: 661px;
+  height: 611px;
+}
+.work-together__title {
+  position: relative;
+  color: #000000;
+  z-index: 2;
+  background-image: url(../../images/highlight.svg);
+  background-repeat: no-repeat;
+  background-size: 45%;
+  background-position: 50% 68%;
 }

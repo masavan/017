@@ -1,0 +1,92 @@
+@use "../base" as *;
+@use "../components" as *;
+@use "../base/variables" as *;
+
+.work-management{
+    position:relative;
+    background-image:  url("../../images/pattern-2.svg");
+    background-repeat: no-repeat;
+    background-position:-12% 26%;
+    padding: 140px;
+    &__container{
+        display: flex;
+        align-items: center;
+    }
+    &__heading{
+        width:672px;
+        height:411px;
+        padding: 9px;
+        margin-right:60px;
+    }
+    &__title{
+        position:relative;
+        color: $colorBlack;
+        z-index: 0;
+        &::after{
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 135px;
+            left: 0;
+            width: 75%;
+            height: 65px;
+            background-image:  url(../../images/highlight.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+    &__text{
+        font-size: $ParagraphP2RegularFonteSize;
+        line-height: $ParagraphP2RegularLineHeight;
+    }
+    &__heading-img{
+        width:748px;
+        height:547px;
+        background: $primeryColorLight;
+    }
+    &__heading-text{
+
+    }
+}
+
+.work-together{
+
+    &__container{
+        padding-top: 100px;
+        display: flex;
+        align-items: center;
+    }
+    &__heading{
+        padding-left: 100px;
+    }
+    &__heading-text{
+
+    }
+    &__image{
+        width: 661px;
+        height: 611px;
+    }
+    &__title{
+        position:relative;
+        color: $colorBlack;
+        z-index: 2;
+        background-image:  url(../../images/highlight.svg);
+        background-repeat: no-repeat;
+        background-size: 45%;
+        background-position:50% 68% ;
+
+
+       // z-index: 0;
+       // &::after{
+      //      content: "";
+      //      position: absolute;
+       //     z-index: -1;
+       //     top: 52px;
+        //    left: 200px;
+       //     width: 45%;
+      //      background-image:  url(../../images/highlight.svg);
+      //      background-repeat: no-repeat;
+      //      background-size: contain;
+       // }
+    }
+}
