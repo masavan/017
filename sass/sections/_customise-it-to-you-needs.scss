@@ -3,8 +3,12 @@
 @use "../base/variables" as *;
 
 .customise-it{
+
     background-color:$primeryColorDark ;
+
+    display: flex;
     padding: 140px 0;
+
     &__container{
 
         display: flex;
@@ -17,7 +21,13 @@
         color: $secondaryColorLight;
     }
     &__heading-text{}
-    &__title{}
+    &__title{
+        position:relative;
+        z-index: 2;
+        background-image:  url(../../images/highlight.svg);
+        background-repeat: no-repeat;
+        background-size: 48%;
+        background-position:72% 70% ;}
     &__text{}
     &__btn{}
     &__img{

@@ -1,0 +1,46 @@
+@use "../base" as *;
+@use "../components" as *;
+@use "../base/variables" as *;
+
+.prising{
+    display: block;
+    padding: 140px 0;
+
+
+    &__container{
+
+    }
+    &__heading{
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__heading-text{
+        text-align: center;
+    }
+    &__title{
+        position:relative;
+        z-index: 2;
+        background-image:  url(../../images/highlight.svg);
+        background-repeat: no-repeat;
+        background-size: 32%;
+        background-position:72% 70% ;
+    }
+    &__text{
+        max-width: 979px;
+    }
+
+
+    // prise list
+    &__list{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__list-item{}
+    &__list-item__text-blook{
+        display: block;
+        gap: 25px;
+    }
+}

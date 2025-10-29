@@ -286,6 +286,7 @@ h1 {
 
 .customise-it {
   background-color: #043873;
+  display: flex;
   padding: 140px 0;
 }
 .customise-it__container {
@@ -298,8 +299,49 @@ h1 {
   margin-right: 98px;
   color: #ffffff;
 }
+.customise-it__title {
+  position: relative;
+  z-index: 2;
+  background-image: url(../../images/highlight.svg);
+  background-repeat: no-repeat;
+  background-size: 48%;
+  background-position: 72% 70%;
+}
 .customise-it__img {
   width: 685px;
   height: 479px;
   background-color: #4f9cf9;
+}
+
+.prising {
+  display: block;
+  padding: 140px 0;
+}
+.prising__heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.prising__heading-text {
+  text-align: center;
+}
+.prising__title {
+  position: relative;
+  z-index: 2;
+  background-image: url(../../images/highlight.svg);
+  background-repeat: no-repeat;
+  background-size: 32%;
+  background-position: 72% 70%;
+}
+.prising__text {
+  max-width: 979px;
+}
+.prising__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.prising__list-item__text-blook {
+  display: block;
+  gap: 25px;
 }
