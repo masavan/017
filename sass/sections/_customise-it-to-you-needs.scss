@@ -1,0 +1,28 @@
+@use "../base" as *;
+@use "../components" as *;
+@use "../base/variables" as *;
+
+.customise-it{
+    background-color:$primeryColorDark ;
+    padding: 140px 0;
+    &__container{
+
+        display: flex;
+        align-items: center;
+    }
+    &__heading{
+        max-width: 697px;
+        padding-right: 8px;
+        margin-right: 98px;
+        color: $secondaryColorLight;
+    }
+    &__heading-text{}
+    &__title{}
+    &__text{}
+    &__btn{}
+    &__img{
+        width: 685px;
+        height: 479px;
+        background-color: $primeryColorLight;
+    }
+}

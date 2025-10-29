@@ -283,3 +283,23 @@ h1 {
   background-size: 45%;
   background-position: 50% 68%;
 }
+
+.customise-it {
+  background-color: #043873;
+  padding: 140px 0;
+}
+.customise-it__container {
+  display: flex;
+  align-items: center;
+}
+.customise-it__heading {
+  max-width: 697px;
+  padding-right: 8px;
+  margin-right: 98px;
+  color: #ffffff;
+}
+.customise-it__img {
+  width: 685px;
+  height: 479px;
+  background-color: #4f9cf9;
+}
