@@ -415,3 +415,114 @@ h1 {
 .border {
   border: #ffe492 4px 4px;
 }
+
+.footer {
+  color: #ffffff;
+  background: #043873;
+  padding-top: 140px;
+}
+.footer__container {
+  display: block;
+}
+.footer__content {
+  display: flex;
+  padding-bottom: 67.07px;
+}
+.footer__logo {
+  max-width: 240px;
+  margin-right: 65.25px;
+}
+.footer__logo-link {
+  list-style-type: none;
+}
+.footer__text {
+  padding-top: 13px;
+}
+.footer__nav {
+  display: flex;
+  gap: 100px;
+}
+.footer__list {
+  list-style-type: none;
+  width: 205.25px;
+}
+.footer__link__main {
+  font-size: 1rem;
+  line-height: auto;
+  font-weight: 700;
+}
+.footer__link {
+  text-decoration: none;
+  color: #ffffff;
+}
+.footer__try {
+  padding-right: 100px;
+  margin-left: 5px;
+}
+.footer__title {
+  font-size: 1.555555556rem;
+  font-weight: 700;
+  line-height: 2;
+  padding-bottom: 8px;
+}
+.footer__try-text {
+  font-size: 0.888888889rem;
+  line-height: 1.111111111;
+  padding-bottom: 23px;
+}
+.footer__line {
+  margin: 0 auto;
+  max-width: 1544px;
+  height: 1px;
+  background: #ffffff;
+}
+.footer__social {
+  padding-top: 33px;
+  display: flex;
+  padding-bottom: 32px;
+}
+.footer__tems-list {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  gap: 60px;
+}
+.footer__tems-english {
+  padding-right: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.footer__tems-english:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  width: 16px;
+  height: 8px;
+  background: url("../../images/arrow-down.svg") no-repeat;
+}
+.footer__tems-english:before {
+  content: "";
+  display: flex;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background: url("../../images/Group.svg") no-repeat;
+}
+.footer__tems-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.888888889rem;
+  line-height: 1.111111111;
+  align-items: center;
+}
+.footer__icon {
+  position: relative;
+  margin-left: auto;
+}
+.footer__img__Linked {
+  padding: 0 32px;
+}
