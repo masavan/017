@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -103,6 +104,10 @@ h1 {
 
 .pb-24px {
   padding-bottom: 24px;
+}
+
+.pb-25px {
+  padding-bottom: 25px;
 }
 
 .btn {
@@ -340,8 +345,73 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 32px;
 }
-.prising__list-item__text-blook {
-  display: block;
+.prising__list-item {
+  border-color: #ffe492;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  padding: 40px 44px 44px 44px;
+}
+.prising__text-blook {
+  display: grid;
   gap: 25px;
+}
+.prising__text-free {
+  font-size: 1.333333333rem;
+  line-height: 2;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.prising__text-prise {
+  font-size: 2rem;
+  line-height: auto;
+  font-weight: 700;
+  letter-spacing: -0.02;
+}
+.prising__text-text {
+  font-size: 1rem;
+  line-height: 1, 277777778;
+  font-weight: 500;
+  letter-spacing: -0.02;
+}
+.prising__point {
+  font-size: 0.888888889rem;
+  line-height: 1.111111111;
+  font-weight: 400;
+  letter-spacing: -0.02;
+}
+.prising__btn {
+  background-color: #ffffff;
+  border-color: #ffe492;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 8px;
+  padding-inline: 40px;
+}
+.prising__point-blook {
+  white-space: normal; /* Дозволяє перенос тексту */
+  overflow-wrap: break-word;
+  width: 350px;
+  display: grid;
+  gap: 28px;
+}
+
+.tik {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.tik::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: 11px;
+  background: url("../../images/Icon1.svg") no-repeat;
+}
+
+.border {
+  border: #ffe492 4px 4px;
 }

@@ -9,6 +9,7 @@
 
     &__container{
 
+
     }
     &__heading{
 
@@ -33,14 +34,88 @@
 
 
     // prise list
+
     &__list{
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 32px;
+
     }
-    &__list-item{}
-    &__list-item__text-blook{
-        display: block;
+    &__list-item{
+        border-color: $secondaryColorYelow;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 10px;
+        padding:40px 44px 44px 44px;
+
+
+    }
+    &__text-blook{
+        display: grid;
         gap: 25px;
+
     }
+
+    &__text-free{
+        font-size: $ParagraphP1SemiBoldFonteSize;
+        line-height: $ParagraphP1SemiBoldLineHeight;
+        font-weight: 600;
+        letter-spacing: 0;
+
+    }
+    &__text-prise{
+        font-size: $H4FontSize;
+        line-height: $H4LineHeight;
+        font-weight: 700;
+        letter-spacing: -0.02;
+
+    }
+    &__text-text{
+        font-size: $ParagraphP2MediumFonteSize;
+        line-height: $ParagraphP2MediumLineHeight;
+        font-weight: 500;
+        letter-spacing: -0.02;
+    }
+    &__point{
+        font-size: $ParagraphP3RegularFonteSize;
+        line-height: $ParagraphP3RegularLineHeight;
+        font-weight: 400;
+        letter-spacing: -0.02;
+
+    }
+    &__btn{
+        background-color: $secondaryColorLight;
+        border-color: $secondaryColorYelow ;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 8px;
+        padding-inline: 40px;
+    }
+    &__point-blook{
+        white-space: normal;    /* Дозволяє перенос тексту */
+        overflow-wrap: break-word;
+        width: 350px;
+        display:grid;
+        gap: 28px;
+    }
+}
+.tik{
+    display: flex;
+    align-items:center;
+
+    width: 100%;
+    &::before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        margin-right: 11px;
+        background: url("../../images/Icon1.svg") no-repeat;
+
+
+    }
+}
+.border{
+    border: $secondaryColorYelow 4px 4px;
 }
