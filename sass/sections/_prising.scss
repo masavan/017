@@ -99,8 +99,40 @@
         display:grid;
         gap: 28px;
     }
-}
-.tik{
+    //acctive
+    &__card-active{
+        background-color: $primeryColorDark;
+    }
+    &__card-active &__text-free{
+        color: $secondaryColorLight;
+    }
+    &__card-active &__text-prise{
+        color: $secondaryColorYelow;
+    }
+    &__card-active &__text-text{
+        color: $secondaryColorLight;
+    }
+    &__card-active &__point{
+        color: $secondaryColorLight;
+    }
+    &--card-active &__tik{
+        display: flex;
+        align-items:center;
+        width: 100%;
+        &::before {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 20px;
+            margin-right: 11px;
+            background: url("../../images/IconYelov.svg") no-repeat;
+
+            }
+        }
+    &__card-active &__list__item{
+        border: none;
+    }
+    &__tik{
     display: flex;
     align-items:center;
 
@@ -113,7 +145,7 @@
         margin-right: 11px;
         background: url("../../images/Icon1.svg") no-repeat;
 
-
+             }
     }
 }
 .border{

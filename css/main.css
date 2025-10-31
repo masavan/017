@@ -397,13 +397,43 @@ h1 {
   display: grid;
   gap: 28px;
 }
-
-.tik {
+.prising__card-active {
+  background-color: #043873;
+}
+.prising__card-active .prising__text-free {
+  color: #ffffff;
+}
+.prising__card-active .prising__text-prise {
+  color: #ffe492;
+}
+.prising__card-active .prising__text-text {
+  color: #ffffff;
+}
+.prising__card-active .prising__point {
+  color: #ffffff;
+}
+.prising--card-active .prising__tik {
   display: flex;
   align-items: center;
   width: 100%;
 }
-.tik::before {
+.prising--card-active .prising__tik::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: 11px;
+  background: url("../../images/IconYelov.svg") no-repeat;
+}
+.prising__card-active .prising__list__item {
+  border: none;
+}
+.prising__tik {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.prising__tik::before {
   content: "";
   display: block;
   width: 20px;
