@@ -438,8 +438,11 @@ h1 {
 .footer__text {
   padding-top: 13px;
 }
-.footer__nav {
+.footer__container-nav {
   display: flex;
+  gap: 100px;
+}
+.footer__nav {
   gap: 100px;
 }
 .footer__list {

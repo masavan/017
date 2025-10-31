@@ -33,11 +33,13 @@
     }
     //nav
     &__container-nav{
+        display:flex;
+        gap: 100px;
     }
-        &__nav{
-            display:flex;
+    &__nav{
+
             gap: 100px;
-        }
+    }
     &__list{
         list-style-type: none;
         width:205.25px;
