@@ -1,6 +1,7 @@
 @use "../base" as *;
 @use "../components" as *;
 @use "../base/variables" as *;
+@use "../base/mixins" as *;
 
 .hero {
     position: relative;
@@ -42,4 +43,16 @@
         background: $primeryColorLight;
     }
 
+}
+@include media-down(xxl){
+    .hero{
+        &__heading-img {
+            height: 457px;
+            max-width: 685px;
+        }
+        &__heading{
+            margin-right:0;
+            width: 691px;
+        }
+    }
 }

@@ -1,6 +1,7 @@
 @use "../base" as *;
 @use "../components" as *;
 @use "../base/variables" as *;
+@use "../base/mixins" as *;
 
 .prising{
     display: block;
@@ -83,6 +84,7 @@
         font-weight: 400;
         letter-spacing: -0.02;
 
+
     }
     &__btn{
         background-color: $secondaryColorLight;
@@ -99,23 +101,7 @@
         display:grid;
         gap: 28px;
     }
-    //acctive
-    &__card-active{
-        background-color: $primeryColorDark;
-    }
-    &__card-active &__text-free{
-        color: $secondaryColorLight;
-    }
-    &__card-active &__text-prise{
-        color: $secondaryColorYelow;
-    }
-    &__card-active &__text-text{
-        color: $secondaryColorLight;
-    }
-    &__card-active &__point{
-        color: $secondaryColorLight;
-    }
-    &--card-active &__tik{
+    &__point{
         display: flex;
         align-items:center;
         width: 100%;
@@ -124,30 +110,58 @@
             display: block;
             width: 20px;
             height: 20px;
-            margin-right: 11px;
-            background: url("../../images/IconYelov.svg") no-repeat;
+            margin-right: 15px;
+            background: url("../../images/Icon1.svg") no-repeat;
 
+        }
+    }
+
+    //acctive
+    &__card-active{
+        padding-top: 80px;
+        padding-bottom: 80px;
+        background-color: $primeryColorDark;
+    }
+
+    &__card-active &__text-free,
+    &__card-active &__text-text,
+    &__card-active &__point{
+        color: $colorWhite;
+    }
+    &__card-active &__text-prise{
+        color: $secondaryColorYelow;
+    }
+
+    &--card-active &__point{
+        &::before {
+            content: "";
+            background: url("../../images/IconYelov.svg") no-repeat;
             }
         }
     &__card-active &__list__item{
         border: none;
     }
-    &__tik{
-    display: flex;
-    align-items:center;
-
-    width: 100%;
-    &::before {
-        content: "";
-        display: block;
-        width: 20px;
-        height: 20px;
-        margin-right: 11px;
-        background: url("../../images/Icon1.svg") no-repeat;
-
-             }
+    &__card-active &__btn{
+        border: none;
+        background-color: $primeryColorLight;
+        color: $colorWhite;
     }
+
 }
 .border{
     border: $secondaryColorYelow 4px 4px;
+}
+
+@include media-down(md){
+    .prising{
+        &__list{
+            position:absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%, 0);
+            display: flex;
+            width: auto;
+            height: 752px;
+        }
+    }
 }

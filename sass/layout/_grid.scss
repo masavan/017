@@ -1,0 +1,22 @@
+@use "../base/mixins" as *;
+@use "../base/variables" as *;
+
+.container{
+    max-width: 1544px;
+    margin-inline: auto ;
+    padding: 0 32px;
+}
+
+@include media-down(md){
+    .container{
+        padding: 20px;
+    }
+
+
+}
+@include media-down(sm){
+    .container{
+        padding: 16px;
+    }
+
+}
