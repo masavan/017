@@ -165,3 +165,8 @@
         }
     }
 }
+@include media-down(md){
+    .prising{
+        display: none;
+    }
+}
