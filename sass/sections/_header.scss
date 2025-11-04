@@ -1,6 +1,7 @@
 @use "../base" as *;
 @use "../components" as *;
 @use "../base/variables" as *;
+@use "../base/mixins" as *;
 
 .header{
     height: 92px;
@@ -11,7 +12,16 @@
     display: flex;
     align-items: center;
     }
+    &__nav-manu{
+        display: none;
 
+        gap: 12px;
+    }
+    &__nav-line{
+        background: $secondaryColorLight;
+        width: 42px;
+        height: 2px;
+    }
     &__logo-link{
         list-style-type: none;
     }
@@ -50,4 +60,51 @@
         padding: 18px 24px;
     }
 
+}
+@include media-down(xl){
+    .header{
+        &__list{
+
+        }
+        &__item{
+            display: none;
+        }
+        &__nav-line{
+            display: block;
+            gap: 32px;
+        }
+        &__nav-manu{
+            padding-left:20px ;
+            display: grid;
+            cursor: pointer;
+            &:hover{
+
+            }
+
+        }
+
+    }
+}
+@include media-down(md){
+    .header{
+        &__try,
+        &__login{
+            display: none;
+        }
+
+    }
+
+}
+@include media-down(sm){
+    .header{
+        height: 66px;
+        &__container{
+            height: auto;
+        }
+        &__logo{
+            width: 134px;
+            height: 24px;
+
+        }
+    }
 }
