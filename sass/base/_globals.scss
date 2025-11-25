@@ -36,6 +36,9 @@ p{
     //  &__tog{
 
     //}
+    &__plan{
+           background-size: 100%;
+    }
     &__mang {
         background-position: 0 125%;
         background-size: 103%;
@@ -43,6 +46,8 @@ p{
     };
     &__extension{
         color: $colorWhite;
-        background-size: 103%;
-    }
+        background-size: 100%;
+
+    };
+
 }

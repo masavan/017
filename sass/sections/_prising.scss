@@ -10,8 +10,8 @@
 
     &__container{
 
-
     }
+
     &__heading{
 
         display: flex;
@@ -21,14 +21,14 @@
     &__heading-text{
         text-align: center;
     }
-    &__title{
-        position:relative;
-        z-index: 2;
-        background-image:  url(../../images/highlight.svg);
-        background-repeat: no-repeat;
-        background-size: 32%;
-        background-position:72% 70% ;
-    }
+    //&__title{
+    //    position:relative;
+    //   z-index: 2;
+    //    background-image:  url(../../images/highlight.svg);
+    //    background-repeat: no-repeat;
+    //    background-size: 32%;
+    //    background-position:72% 70% ;
+    //}
     &__text{
         max-width: 979px;
     }
@@ -38,6 +38,7 @@
 
     &__list{
         display: flex;
+
         align-items: center;
         justify-content: center;
         gap: 32px;
@@ -50,27 +51,22 @@
         border-radius: 10px;
         padding:40px 44px 44px 44px;
 
-
     }
     &__text-blook{
         display: grid;
         gap: 25px;
-
     }
-
     &__text-free{
         font-size: $ParagraphP1SemiBoldFonteSize;
         line-height: $ParagraphP1SemiBoldLineHeight;
         font-weight: 600;
         letter-spacing: 0;
-
     }
     &__text-prise{
         font-size: $H4FontSize;
         line-height: $H4LineHeight;
         font-weight: 700;
         letter-spacing: -0.02;
-
     }
     &__text-text{
         font-size: $ParagraphP2MediumFonteSize;
@@ -83,8 +79,6 @@
         line-height: $ParagraphP3RegularLineHeight;
         font-weight: 400;
         letter-spacing: -0.02;
-
-
     }
     &__btn{
         background-color: $secondaryColorLight;
@@ -95,7 +89,7 @@
         padding-inline: 40px;
     }
     &__point-blook{
-        white-space: normal;    /* Дозволяє перенос тексту */
+        white-space: normal;
         overflow-wrap: break-word;
         width: 350px;
         display:grid;
@@ -117,40 +111,51 @@
     }
 
     //acctive
-    &__card-active{
-        padding-top: 80px;
-        padding-bottom: 80px;
-        background-color: $primeryColorDark;
-    }
+        &__card-active {
+            background-color: $primeryColorDark;
+            transform: scale(1.05); // Злегка збільшена на десктопі
+            border: none;
+            padding: 50px 44px; // Трохи вища
+            z-index: 2; // Щоб була поверх інших при збільшенні
 
-    &__card-active &__text-free,
-    &__card-active &__text-text,
-    &__card-active &__point{
-        color: $colorWhite;
-    }
-    &__card-active &__text-prise{
-        color: $secondaryColorYelow;
-    }
+            .prising__text-free,
+            .prising__text-text,
+            .prising__point {
+                color: $colorWhite;
+            }
 
-    &--card-active &__point{
-        &::before {
-            content: "";
-            background: url("../../images/IconYelov.svg") no-repeat;
+            .prising__text-prise {
+                color: $secondaryColorYelow;
+            }
+
+            .prising__btn {
+                background-color: $primeryColorLight;
+                border: none;
+                color: $colorWhite;
+            }
+
+            .prising__point::before {
+                background-image: url("../../images/IconYelov.svg");
             }
         }
-    &__card-active &__list__item{
-        border: none;
-    }
-    &__card-active &__btn{
-        border: none;
-        background-color: $primeryColorLight;
-        color: $colorWhite;
-    }
-
 }
 .border{
     border: $secondaryColorYelow 4px 4px;
 }
+
+@include media-down(xxl) {
+    .prising{
+        &__container{
+            box-sizing: border-box;
+        }
+        &__list-item{
+
+        }
+
+
+    }
+}
+
 
 @include media-down(md){
     .prising{
@@ -165,8 +170,27 @@
         }
     }
 }
-@include media-down(md){
-    .prising{
-        display: none;
+@include media-down(md) { // Точка перелому для планшетів/мобільних
+    .prising {
+        padding: 60px 0;
+
+        &__list {
+            // Робимо стовпчик
+            flex-direction: column;
+            align-items: center;
+            gap: 40px; // Більший відступ між картками по вертикалі
+        }
+
+        &__list-item {
+            max-width: 100%; // Картка на всю ширину контейнера
+            transform: none !important; // Прибираємо збільшення активної картки
+        }
+
+        // Активна картка залишається синьою, але стандартного розміру
+        &__card-active {
+            padding: 40px 44px;
+        }
     }
 }
+
+

@@ -102,6 +102,9 @@
         padding-bottom:32px;
     }
     &__tems{
+        &1{
+            display: none;
+        }
         &-list{
             display: flex;
             list-style-type: none;
@@ -163,15 +166,106 @@
 }
 @include media-down(xxl){
     .footer{
-    &__list{
-        width:100%;
-    }
+        &__list{
+            width:100%;
+        }
         &__try{
             width: 259px;
-
         }
+
+
     }
 }
 @include media-down(xl){
+    .footer{
+        &__container-nav{
+            gap: 45.75px;
 
+        }
+        &__nav__prising{
+            width: 177px;
+        }
+
+    }
+}
+
+@include media-down(lg){
+    .footer{
+        &__content{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        &__container-nav{
+            padding-top: 100px;
+            gap: 100px;
+            flex-direction: column;
+        }
+        &__social{
+
+        }
+        &__tems{
+            gap:51.75px;
+        }
+
+        &__tems1{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &__tems2{
+        display: none;
+        }
+
+        &__line{
+            order: 2;
+        }
+        &__tems{
+            order: 1;
+        }
+        &__icon{
+            order: 3;
+            margin-right: auto;
+            margin-left: 0;
+        }
+        &__tems-link{
+            font-size: $ParagraphP3RegularFonteSize;
+            line-height: $ParagraphP3RegularLineHeight;
+            white-space: nowrap;
+        }
+    }
+}
+
+@include media-down(costom-sm){
+    .footer{
+        &__container{
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+           // display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        &__tems-list{
+            display: flex;
+            flex-direction: column;
+           margin: 0 auto;
+        }
+        &__line{
+            order: 2;
+        }
+        &__tems{
+            order: 1;
+        }
+        &__icon{
+            order: 3;
+            margin-left: auto;
+        }
+        &__try{
+
+        }
+    }
 }
