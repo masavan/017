@@ -1,6 +1,7 @@
 @use "../base" as *;
 @use "../components" as *;
 @use "../base/variables" as *;
+@use "../base/mixins" as *;
 
 .customise-it{
 
@@ -13,6 +14,10 @@
 
         display: flex;
         align-items: center;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+
     }
     &__heading{
         max-width: 697px;
@@ -22,17 +27,120 @@
     }
     &__heading-text{}
     &__title{
-        position:relative;
-        z-index: 2;
-        background-image:  url(../../images/highlight.svg);
-        background-repeat: no-repeat;
-        background-size: 48%;
-        background-position:72% 70% ;}
-    &__text{}
+       // position:relative;
+       // z-index: 2;
+       // background-image:  url(../../images/highlight.svg);
+       // background-repeat: no-repeat;
+      //  background-size: 48%;
+       // background-position:72% 70% ;
+        }
+    &__text{
+        max-width: 592px;
+        width:100%;
+    }
     &__btn{}
     &__img{
-        width: 685px;
-        height: 479px;
-        background-color: $secondaryColorBlue;
+        width: 100%;
+        max-width: 686px;
+        height: auto;
+        aspect-ratio: 685/479;
+        object-fit: cover;
+    }
+}
+@include media-down(xxl){
+    .customise-it{
+        &__heading{
+
+        }
+        &__title{
+            font-size: $H2FontSize;
+            line-height: $H2FontSize;
+        }
+        &__text{
+
+            max-width: 692px;
+
+        }
+        &__img{
+            max-width: 686px;
+
+        }
+
+    }
+}
+
+@include media-down(xl){
+    .customise-it{
+        &__heading{
+           // width: 100%;
+        }
+        &__heading-text{
+
+            max-width: 592px;
+
+        }
+        &__img{
+            max-width: 602px;
+
+        }
+        &__title{
+            font-size: $H2FontSize;
+            line-height: $H2FontSize;
+        }
+    }
+}
+@include media-down(xl-s){
+    .customise-it{
+        &__heading{
+
+        }
+        &__heading-text{
+            max-width: 527px;
+
+        }
+        &__img{
+            max-width: 459px;
+
+           height: auto;
+        }
+
+    }
+}
+@include media-down(lg){
+    .customise-it{
+        padding: 100px 0;
+        &__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 50px;
+            width: 100%;
+            }
+        &__heading{
+              max-width: 100%;
+              margin-right: 0
+        }
+        &__heading-text{
+            max-width: 100%;
+        }
+        &__img{
+            max-width: 557px;
+        }
+        &__btn{
+            margin:0 auto;
+        }
+        &__title{
+            font-size: $H3FontSize;
+            line-height: $H3FontSize;
+        }
+    }
+}
+@include media-down(costom-sm){
+    .customise-it{
+        &__title{
+            font-size: $H4FontSize;
+            line-height: $H4FontSize;
+        }
     }
 }

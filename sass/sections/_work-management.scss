@@ -347,19 +347,3 @@
         }
     }
 }
-.highlight{
-    position: relative;
-    color: $colorBlack;
-    z-index: 2;
-    background-image: url(../../images/highlight.svg);
-    background-repeat: no-repeat;
-    background-position:0 100%;
-  //  &__tog{
-
- //}
-    &__mang {
-        background-position: 0 125%;
-        background-size: 103%;
-       height: 65px;
-    };
-}
