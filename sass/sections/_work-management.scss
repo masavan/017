@@ -1,17 +1,20 @@
 @use "../base" as *;
 @use "../components" as *;
 @use "../base/variables" as *;
+@use "../base/mixins" as *;
 
 .work-management {
     position: relative;
     background-image: url("../../images/pattern-2.svg");
     background-repeat: no-repeat;
-    background-position: -12% 26%;
-    padding: 140px;
+    background-position: -12% 26% ;
+    padding-top: 140px;
+    padding-bottom: 140px;
 
     &__container {
         display: flex;
         align-items: center;
+
     }
 
     &__heading {
@@ -25,7 +28,7 @@
         position: relative;
         color: $colorBlack;
         z-index: 0;
-
+        /*
         &::after {
             content: "";
             position: absolute;
@@ -37,7 +40,8 @@
             background-image: url(../../images/highlight.svg);
             background-repeat: no-repeat;
             background-size: contain;
-        }
+        }*/
+
     }
 
     &__text {
@@ -45,15 +49,23 @@
         line-height: $ParagraphP2RegularLineHeight;
     }
 
-    &__heading-img {
-        width: 748px;
-        height: 547px;
-        background: $secondaryColorBlue;
+    &__heading-img-container {
+        width: 100%;
+        max-width: 748px;
+        aspect-ratio: 748 / 547;
+        height: auto;
     }
-
+    &__heading-img {
+        background: $secondaryColorBlue;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
     &__heading-text {
 
     }
+
 }
 
 .work-together {
@@ -73,31 +85,227 @@
     }
 
     &__image {
-        width: 661px;
-        height: 611px;
+        max-width: 710px;
+        height: 448px;
+
     }
 
     &__title {
-        position: relative;
-        color: $colorBlack;
-        z-index: 2;
-        background-image: url(../../images/highlight.svg);
-        background-repeat: no-repeat;
-        background-size: 45%;
-        background-position: 50% 68%;
-
-
-        // z-index: 0;
-        // &::after{
-        //      content: "";
-        //      position: absolute;
-        //     z-index: -1;
-        //     top: 52px;
-        //    left: 200px;
-        //     width: 45%;
-        //      background-image:  url(../../images/highlight.svg);
-        //      background-repeat: no-repeat;
-        //      background-size: contain;
-        // }
     }
+}
+@include media-down(xxl){
+    .work-management{
+        background-position:-45% 0% ;
+
+        &__heading-img{
+            width: 100%;
+            height:100% ;
+            background: $secondaryColorBlue;
+        }
+        &__heading-img-container {
+            width: 719px;
+            height: 448px;
+        }
+        &__heading {
+            margin-right: 0;
+        }
+    }
+    .work-together {
+        &__image{
+            width: 100%;
+            height:auto ;
+        }
+
+    }
+}
+
+@include media-down(xl-s){
+    .work-management{
+        &__container {
+        }
+        &__heading {
+            height: 100%;
+            padding:0 ;
+        }
+        &__heading-img-container {max-width: 100%;
+            width: 100%;
+            height: 384px;
+           margin-left: 33px;
+            margin-top: 18.5px;
+            padding-bottom: 28px;
+            padding-top: 28px;
+           margin-bottom: 18.5px;
+            box-sizing: border-box;
+        }
+        &__heading-img{
+
+
+            width: 100%;
+
+
+        }
+        &__heading-text {
+            width: 436px;
+        }
+        &__title {
+            font-size: $H2FontSize;
+
+        }
+        &__text {
+
+        }
+        }
+    }
+
+    .work-together {
+        &__container {
+
+        }
+        &__image{
+            max-width: 583px;
+            height:auto ;
+        }
+    }
+@include media-down(lg) {
+    .work-management {
+        padding: 100px 0;
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+
+        }
+
+        &__heading {
+            width: 100%;
+            margin: 0;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__heading-text {
+            width: 100%;
+            text-align: center;
+        }
+
+        &__title {
+        }
+
+        &__heading-img-container {
+            width: 100%;
+            max-width: 628px;
+            aspect-ratio: 748 / 547;
+            height: auto;
+            margin: 40px auto 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+    }
+}
+
+@include media-down(md) {
+    .work-management {
+
+        padding: 100px 0;
+        &__container {
+            padding-bottom: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 100vw;
+            overflow: hidden
+        }
+        &__heading {
+            padding: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+        &__heading-text{
+            text-align: center;
+            width: 100%;
+            max-width: 100%;
+           // padding: 0 20px;
+            box-sizing: border-box;
+            margin-bottom: 60px;
+        }
+        &__title{
+            font-size: $H3FontSize;
+            line-height: $H3LineHeight;
+            overflow-wrap: break-word;
+            word-break: break-word;
+
+            white-space: normal;
+
+
+
+        }
+        &__btn{
+            margin: 0 auto;
+
+        }
+        &__heading-img-container {
+
+           margin: 60px auto 0 auto;
+            padding: 0;
+            max-width: 561px;
+            aspect-ratio:551/367 ;
+            height: auto;
+        }
+
+    }
+}
+@include media-down(costom-sm) {
+    .work-management{
+        padding: 80px 0;
+        &__container {
+        }
+        &__heading-img-container {
+            height: 191px;
+
+        }
+        &__img{
+            height: 191px;
+        }
+        &__titel{
+             font-size: $H4FontSize;
+             line-height: $H4LineHeight;
+         }
+        &__heading{
+            padding: 0;
+        }
+        &__heading-text{
+            padding: 0;
+        }
+
+    }
+    .work-together {
+
+    }
+}
+.highlight{
+    position: relative;
+    color: $colorBlack;
+    z-index: 2;
+    background-image: url(../../images/highlight.svg);
+    background-repeat: no-repeat;
+    background-position:0 100%;
+  //  &__tog{
+
+ //}
+    &__mang {
+        background-position: 0 125%;
+        background-size: 103%;
+       height: 65px;
+    };
 }
