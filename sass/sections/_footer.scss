@@ -5,20 +5,26 @@
 
 
 .footer{
+    width: 100%;
     color: $secondaryColorLight;
     background:$primeryColorDark;
     padding-top: 140px;
     &__container{
+        max-width: 1440px;
+        width: 100%;
+
         display:block;
     }
     &__content{
         display:flex;
         padding-bottom: 67.07px;
+        justify-content: space-between;
+       // flex-wrap: wrap;
     }
     //logo container
     &__logo{
         max-width: 240px;
-        margin-right: 65.25px;
+        padding-right: 65.25px;
     }
     &__logo-link{
         list-style-type: none;
@@ -37,16 +43,17 @@
     //nav
     &__container-nav{
         display:flex;
-        gap: 100px;
+        width: 100%;
+        max-width: 1440px;
+       // gap: 100px;
+        justify-content: space-between;
         padding-right: 100px;
     }
-    &__nav{
-
-            gap: 100px;
-    }
+    &__nav{}
     &__list{
         list-style-type: none;
-        width:205.25px;
+        width:100%;
+        min-width: 150px;
         white-space: nowrap;
 
     }
@@ -90,6 +97,7 @@
     //line
 
     &__line{
+        width: 100%;
         margin: 0 auto;
        max-width: 1544px;
         height: 1px;
@@ -102,14 +110,21 @@
         padding-bottom:32px;
     }
     &__tems{
+
         &1{
             display: none;
         }
         &-list{
+            width: 100%;
+            max-width: 1440px;
             display: flex;
             list-style-type: none;
             align-items:center;
-            gap: 60px;
+
+            justify-content: space-between;
+            &-1{
+                gap: 60px;
+            }
         }
         &-english{
 
@@ -151,9 +166,14 @@
             align-items:center;
         }
     }
+    &__social{
+        justify-content: space-between;
+    }
     &__icon{
+
             position:relative;
-            margin-left: auto;
+
+            //margin-left: auto;
 
     }
     &__img__facebook{}
@@ -166,11 +186,21 @@
 }
 @include media-down(xxl){
     .footer{
+        width: 100%;
+        &__container{
+            width: 100%;
+        }
+        &__container-nav{
+            padding-right: 0;
+            justify-content: space-between;
+        }
+
         &__list{
             width:100%;
         }
         &__try{
-            width: 259px;
+            width: 100%;
+            max-width: 259px;
         }
 
 
@@ -178,9 +208,16 @@
 }
 @include media-down(xl){
     .footer{
-        &__container-nav{
-            gap: 45.75px;
+        width: 100%;
+        &__container{
+            width:100%;
+        }
+        &__content{
 
+        }
+        &__container-nav{
+            justify-content: space-between;
+           // flex-wrap: wrap;
         }
         &__nav__prising{
             width: 177px;
@@ -188,7 +225,25 @@
 
     }
 }
+@include media-down(xl-s){
+    .footer{
+        width: 100%;
+        &__container{
+            width:100%;
+        }
+        &__content{
 
+        }
+        &__container-nav{
+            gap: 35.75px;
+            flex-wrap: wrap;
+        }
+        &__nav__prising{
+            width: 177px;
+        }
+
+    }
+}
 @include media-down(lg){
     .footer{
         &__content{
@@ -205,7 +260,7 @@
 
         }
         &__tems{
-            gap:51.75px;
+           justify-content: space-between;
         }
 
         &__tems1{
@@ -233,13 +288,17 @@
         &__tems-link{
             font-size: $ParagraphP3RegularFonteSize;
             line-height: $ParagraphP3RegularLineHeight;
-            white-space: nowrap;
+
+        }
+        &__tems-list{
+            flex-wrap: wrap;
         }
     }
 }
 
 @include media-down(costom-sm){
     .footer{
+
         &__container{
             align-items: center;
             justify-content: center;
@@ -248,6 +307,13 @@
            // display: flex;
             flex-direction: column;
             text-align: center;
+        }
+        &__logo {
+            padding: 0;
+            margin: 0 auto;
+        }
+        &__nav{
+           margin: 0 auto;
         }
         &__tems-list{
             display: flex;
@@ -265,7 +331,10 @@
             margin-left: auto;
         }
         &__try{
-
+            margin: 0 auto;
+        }
+        &__btn{
+            margin: 0 auto;
         }
     }
 }
