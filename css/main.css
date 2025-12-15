@@ -824,6 +824,14 @@ h1 {
   margin-right: 15px;
   background: url("../../images/Icon1.svg") no-repeat;
 }
+.prising__dots {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  height: 50px;
+}
 .prising__card-active {
   background-color: #043873;
   transform: scale(1.05);
@@ -851,6 +859,16 @@ h1 {
 .border {
   border: #ffe492 4px 4px;
 }
+.border .dot {
+  width: 10px;
+  height: 10px;
+  background-color: #4F9CF9;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.border .dot--active {
+  background-color: #043873;
+}
 
 @media screen and (max-width: 1450px) {
   .prising__container {
@@ -871,6 +889,9 @@ h1 {
   }
 }
 @media screen and (max-width: 992px) {
+  .prising__list-item {
+    box-sizing: revert;
+  }
   .prising__title {
     font-size: 3rem;
     line-height: auto;
