@@ -4,16 +4,19 @@
 @use "../base/mixins" as *;
 
 .prising{
+    width: 100%;
     display: block;
     padding: 140px 0;
 
 
     &__container{
-
+        width: 100%;
+        max-width:1440px ;
+        margin: 0 auto;
+       // padding: 0 15px;
     }
 
     &__heading{
-
         display: flex;
         align-items: center;
         justify-content: center;
@@ -31,17 +34,20 @@
     //}
     &__text{
         max-width: 979px;
+        margin: 0 auto;
     }
 
 
     // prise list
 
     &__list{
+        width: 100%;
+        max-width: 1440px;
         display: flex;
-
         align-items: center;
         justify-content: center;
         gap: 32px;
+
 
     }
     &__list-item{
@@ -50,7 +56,11 @@
         border-width: 1px;
         border-radius: 10px;
         padding:40px 44px 44px 44px;
-
+        width: 100%;
+     //   box-sizing: border-box;
+        //flex: 1;
+        min-width: 341px;
+        max-width: 437px;
     }
     &__text-blook{
         display: grid;
@@ -73,12 +83,14 @@
         line-height: $ParagraphP2MediumLineHeight;
         font-weight: 500;
         letter-spacing: -0.02;
+        word-break: break-word;
     }
     &__point{
         font-size: $ParagraphP3RegularFonteSize;
         line-height: $ParagraphP3RegularLineHeight;
         font-weight: 400;
         letter-spacing: -0.02;
+        word-break: break-word;
     }
     &__btn{
         background-color: $secondaryColorLight;
@@ -89,9 +101,9 @@
         padding-inline: 40px;
     }
     &__point-blook{
-        white-space: normal;
-        overflow-wrap: break-word;
-        width: 350px;
+        //white-space: normal;
+       // overflow-wrap: break-word;
+              //  width: 350px;
         display:grid;
         gap: 28px;
     }
@@ -151,14 +163,69 @@
         &__list-item{
 
         }
+        &__point{
+            word-break: break-word;
+
+        }
 
 
     }
 }
-
-
-@include media-down(md){
+@include media-down(xl-s) {
     .prising{
+        &__list-item{
+            border-color: $secondaryColorYelow;
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 10px;
+            padding:40px 44px 44px 44px;
+            width: 100%;
+            //box-sizing: border-box;
+            //  flex: 1;
+            max-width: 472px;
+        }
+
+    }
+}
+
+@include media-down(lg) {
+    .prising{
+        &__title{
+            font-size: $H3FontSize;
+            line-height: $H3LineHeight;
+        }
+    }
+}
+
+@include media-down(sm) {
+    .prising {
+        &__title{
+            font-size: $H4FontSize;
+            line-height: $H4LineHeight;
+        }
+        &__list-item{
+            min-width: 289px;
+
+        }
+
+        &__none{
+            display: none;
+        }
+
+    }
+}
+/*
+@include media-down(lg){
+    .prising{
+
+        &__container{
+            display: block;
+            position: relative;
+            width: 100%;
+            height: 752px;
+            overflow: hidden;
+
+        }
         &__list{
             position:absolute;
             top: 0;
@@ -168,29 +235,17 @@
             width: auto;
             height: 752px;
         }
+        &__list-item{
+            flex:1 1 470px;
+            width: 470px;
+        }
+
     }
 }
-@include media-down(md) { // Точка перелому для планшетів/мобільних
-    .prising {
-        padding: 60px 0;
+ */
 
-        &__list {
-            // Робимо стовпчик
-            flex-direction: column;
-            align-items: center;
-            gap: 40px; // Більший відступ між картками по вертикалі
-        }
 
-        &__list-item {
-            max-width: 100%; // Картка на всю ширину контейнера
-            transform: none !important; // Прибираємо збільшення активної картки
-        }
 
-        // Активна картка залишається синьою, але стандартного розміру
-        &__card-active {
-            padding: 40px 44px;
-        }
-    }
-}
+
 
 
